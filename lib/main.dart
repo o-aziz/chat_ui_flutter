@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:chat_ui/screens/home_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -12,9 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.red,
-        accentColor: Color(0xFFFEF9EB),
+        accentColor: const Color(0xFFFEF9EB),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

@@ -4,6 +4,8 @@ import 'package:chat_ui/widgets/favorite_contacts.dart';
 import 'package:chat_ui/widgets/recent_chats.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key key}) : super(key: key);
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -12,15 +14,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           iconSize: 30.0,
           color: Colors.white,
           onPressed: () {},
         ),
-        title: Text(
+        title: const Text(
           'Chats',
           style: TextStyle(
             fontSize: 28.0,
@@ -30,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0.0,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             iconSize: 30.0,
             color: Colors.white,
             onPressed: () {},
@@ -39,18 +41,18 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: <Widget>[
-          CategorySelector(),
+          const CategorySelector(),
           Expanded(
             child: Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).accentColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(30.0),
                   topRight: Radius.circular(30.0),
                 ),
               ),
               child: Column(
-                children: <Widget>[
+                children: const <Widget>[
                   FavoriteContacts(),
                   RecentChats(),
                 ],
